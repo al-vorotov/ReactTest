@@ -1,0 +1,24 @@
+@import '../../common/scss/vars.scss';
+@import '../../common/scss/theme.scss';
+
+.Header {
+  width: 100%;
+  height: $header-height;
+  padding: $page-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  @include customize() {
+    background-color: getValue(primaryColor);
+  }
+
+  &-login {
+    justify-content: flex-start;
+  }
+
+  &-link {
+    margin-left: 10px;
+  }
+
+}

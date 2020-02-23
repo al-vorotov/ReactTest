@@ -1,0 +1,37 @@
+@import '../../common/scss/vars.scss';
+@import '../../common/scss/theme.scss';
+
+.Sidebar {
+  width: 50px;
+  min-height: $content-height;
+  @include customize() {
+    background-color: getValue(primaryColorDark);
+  }
+
+  &-open {
+    width: 150px;
+  }
+
+  &__item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    @include customize() {
+      color: darken(getValue(primaryColorDark), 10%);
+    }
+
+    &:hover {
+      @include customize() {
+        color: lighten(getValue(primaryColorLight), 30%);
+      }
+    }
+  }
+}
+.Sidebar-Link-closed {
+  display: none;
+}

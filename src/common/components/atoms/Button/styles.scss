@@ -1,0 +1,36 @@
+@import '../../../scss/vars.scss';
+@import '../../../scss/theme.scss';
+
+.Button {
+  height: 30px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 4px;
+  margin:5px;
+  &.Button-disabled{
+    cursor: pointer;
+  }
+  &-submit {
+    cursor: not-allowed;
+    @include customize() {
+      background-color: getValue(accentColor);
+      color: getValue(primaryColorText);
+      &.Button-disabled:hover {
+        background-color: darken(getValue(accentColor), 10%);
+      }
+    }
+  }
+
+  &-cancel {
+    text-decoration: underline;
+
+    @include customize() {
+      color: getValue(primaryColorLightText);
+      transition: color 200ms linear;
+      &:hover {
+        color: getValue(primaryColorDarkText);
+      }
+    }
+  }
+}

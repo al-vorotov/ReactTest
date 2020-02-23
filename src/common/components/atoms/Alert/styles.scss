@@ -1,0 +1,14 @@
+@import '../../../scss/vars.scss';
+@import '../../../scss/theme.scss';
+
+.Alert {
+  padding: 10px;
+  &-error {
+    background-color: lighten($error-red, 45%);
+    color: $error-red;
+    border: 1px solid $error-red;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+}

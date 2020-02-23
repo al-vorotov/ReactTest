@@ -1,0 +1,15 @@
+@import '../../../common/scss/theme.scss';
+@import '../../../common/scss/vars.scss';
+
+.ThemeItem {
+  width: 17px;
+  height: 17px;
+  &-selected {
+    box-sizing: border-box;
+    width: 19px;
+    height: 19px;
+    @include customize() {
+      border: 2px solid getValue(accentColor);
+    }
+  }
+}

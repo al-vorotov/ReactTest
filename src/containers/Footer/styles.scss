@@ -1,0 +1,9 @@
+@import '../../common/scss/vars.scss';
+@import '../../common/scss/theme.scss';
+
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $footer-height;
+}

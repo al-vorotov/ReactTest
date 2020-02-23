@@ -1,0 +1,42 @@
+@import '../../../scss/vars.scss';
+@import '../../../scss/theme.scss';
+
+.NameList {
+  padding: 0;
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-left: 10px;
+    list-style-type: none;
+    max-width:300px;
+    height: 50px;
+    position: relative;
+    border-radius: 3px;
+    @include customize() {
+      border: 1px solid darken(getValue(primaryColorDark), 10%);
+    }
+    &-active {
+      opacity: 0.5;
+      transition: 0.5s;
+      @include customize() {
+        border: 1px solid getValue(lightBorderColor);
+      }
+    }
+    margin-top:10px ;
+  }
+
+  &__icon {
+    right: 10px;
+    position: absolute;
+    @include customize() {
+      color: darken(getValue(primaryColorDark), 10%);
+    }
+
+    &:hover {
+      @include customize() {
+        color: lighten(getValue(accentColor), 10%);
+      }
+    }
+  }
+}

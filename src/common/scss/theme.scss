@@ -1,0 +1,55 @@
+$themes: (
+        theme_1: (
+                cartLigthColor: #fff,
+                primaryColorLight: #f2f7fb,
+                primaryColorDark: #476c6e,
+                primaryColor: #6bc4c8,
+                primaryColorText: #fff,
+                primaryColorDarkText: #212121,
+                primaryColorLightText: #919394,
+                accentColor: #ffc14d,
+                dividerColor: #bdbdbd,
+                borderColor: #928e8e45,
+                lightBorderColor: #e44a29,
+        ),
+        theme_2: (
+                cartLigthColor: #fff,
+                primaryColorLight: #fbf2fb,
+                primaryColorDark: #e44a29,
+                primaryColor: #1e2640,
+                primaryColorText: #fff,
+                primaryColorDarkText: #212121,
+                primaryColorLightText: #919394,
+                accentColor: #ffc14d,
+                dividerColor: #bdbdbd,
+                borderColor: #928e8e45,
+                lightBorderColor: #0b638a,
+        ),
+);
+
+@mixin customize() {
+  $array: $themes;
+  $prefix: App;
+
+  @each $theme, $map in $array {
+    .#{$prefix}-#{$theme} & {
+      $array-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($array, $theme), '#{$key}');
+        $array-map: map-merge(
+                        $array-map,
+                        (
+                                $key: $value,
+                        )
+        ) !global;
+      }
+
+      @content;
+      $array-map: null !global;
+    }
+  }
+}
+
+@function getValue($key) {
+  @return map-get($array-map, $key);
+}

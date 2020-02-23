@@ -1,0 +1,21 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-react"],
+  "jsRules": {},
+  "rules": {
+    "quotemark": [true, "single", "jsx-double"],
+    "no-console": false,
+    "no-unused-expression": false,
+    "member-access": false,
+    "ordered-imports": false,
+    "max-classes-per-file": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "object-literal-sort-keys": false,
+    "no-shadowed-variable": false,
+    "interface-name": false,
+    "arrow-parens": false
+  },
+  "rulesDirectory": [],
+  "experimentalDecorators": true
+}

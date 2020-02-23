@@ -1,0 +1,11 @@
+.Theme {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+
+  &__items {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+}

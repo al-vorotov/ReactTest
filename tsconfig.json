@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es6",
+    "module": "esnext",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react",
+    "removeComments": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es6"
+    ],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  }
+}

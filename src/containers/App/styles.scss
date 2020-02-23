@@ -1,0 +1,31 @@
+@import '../../common/scss/vars.scss';
+@import '../../common/scss/theme.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  transition: background-color 200ms linear;
+}
+
+.App {
+  @include customize() {
+    background-color: getValue(primaryColorLight);
+    color: getValue(primaryColorDarkText);
+  }
+  &__content {
+    min-height: $content-height;
+    display: flex;
+
+    @include customize() {
+      background-color: getValue(primaryColorLight);
+      color: getValue(primaryColorDarkText);
+    }
+  }
+  &__page {
+    flex-grow: 1;
+  }
+}
